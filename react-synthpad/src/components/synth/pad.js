@@ -2,7 +2,7 @@ import React from 'react';
 
 
 
-export default ({ letter, note, color }) => {
+export default ({ letter, note, color, playSound }) => {
     const styles = {
         width: 100,
         height: 100,
@@ -12,6 +12,6 @@ export default ({ letter, note, color }) => {
     }
 
     return (
-    <button style={styles}>{note}</button>
+    <button onClick={() => playSound(letter)} style={styles}>{note}</button>
     )
 }
